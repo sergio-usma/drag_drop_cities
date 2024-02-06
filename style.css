@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background: url("./assets/bg-1.png") no-repeat top center/cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+header {
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  background: black;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.6rem;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  max-width: 900px;
+  height: 60vh;
+  max-height: 600px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.city {
+  position: relative;
+  width: calc(100% / 3);
+  height: calc(100% / 4);
+  cursor: move;
+}
+
+.city:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  z-index: 3;
+}
+
+.city:hover::before {
+  content: attr(city);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.one {
+  background: url("./assets/1.jpg") no-repeat center/cover;
+}
+
+.two {
+  background: url("./assets/2.jpg") no-repeat center/cover;
+}
+
+.three {
+  background: url("./assets/3.jpg") no-repeat center/cover;
+}
+
+.four {
+  background: url("./assets/4.jpg") no-repeat center/cover;
+}
+
+.five {
+  background: url("./assets/5.jpg") no-repeat center/cover;
+}
+
+.six {
+  background: url("./assets/6.jpeg") no-repeat center/cover;
+}
+
+.seven {
+  background: url("./assets/7.jpg") no-repeat center/cover;
+}
+
+.eight {
+  background: url("./assets/8.jpg") no-repeat center/cover;
+}
+
+.nine {
+  background: url("./assets/9.jpg") no-repeat center/cover;
+}
+
+.ten {
+  background: url("./assets/10.jpg") no-repeat center/cover;
+}
+
+.eleven {
+  background: url("./assets/11.jpg") no-repeat center/cover;
+}
+
+.twelve {
+  background: url("./assets/12.jpg") no-repeat center/cover;
+}
+
+footer {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+footer a,
+footer a:active {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .city {
+    width: calc(100% / 4);
+    height: calc(100% / 3);
+  }
+
+  .city:hover::before {
+    font-size: 2rem;
+  }
+}
